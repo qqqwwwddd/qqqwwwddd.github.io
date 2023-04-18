@@ -31,7 +31,7 @@ export default function BlogCard({blog, isDark}) {
                       <img
                         src={blog.image}
                         alt={blog.title}
-                        className="card-image"
+                        className="blogcard-image"
                       ></img>
                     </div>
                   ) : null}
