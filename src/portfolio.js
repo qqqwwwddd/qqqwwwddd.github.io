@@ -181,13 +181,18 @@ const techStack = {
       progressPercentage: "70%"
     },
     {
+      Stack: "DataBase",
+      detail: emoji("💡 MariaDB 💡 MySQL")
+    },
+    {
       Stack: "ETC",
       detail: emoji(" 💡 Git 💡 Notion  💡 Figma "),
     },
     {
       Stack: "TOOLS",
-      detail: emoji("💡 Visual Studio Code 💡 STS 💡 Eclipse 💡 MariaDB 💡 MySQL")
+      detail: emoji("💡 Visual Studio Code 💡 STS 💡 Eclipse ")
     },
+    
 
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -226,13 +231,6 @@ const techStack = {
 //   ]
 // };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
-const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
-};
 
 // Some big projects you have worked on
 
@@ -242,31 +240,50 @@ const bigProjects = {
   projects: [
     {
       image: require("./assets/images/pixabay.png"),
-      projectName: "pixabay 클론 코딩",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: emoji("💻 pixabay 클론 코딩"),
+      projectDesc: "React 학습을 위한 토이 프로젝트 ",
       footerLink: [
         {
           name: emoji("Github ❤︎"),
-          url: "http://saayahealth.com/"
+          url: "https://github.com/qqqwwwddd/fixabayClone.git"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/pixabay.png"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/untacttour.png"),
+      projectName: "✈️ Untactour ",
+      projectDesc: "비대면 온라인 해외 여행 컨텐츠 쇼핑몰 Java 프로젝트",
       footerLink: [
         {
           name: emoji("Github ❤︎"),
-          url: "http://nextu.se/"
+          url: "https://github.com/qqqwwwddd/untact-tour.git"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/goco.png"),
+      projectName: emoji("💼 GoCompany"),
+      projectDesc: "그룹웨어(전자결재/일정관리) SpringBoot & React 프로젝트",
+      footerLink: [
+        {
+          name: emoji("Github ❤︎"),
+          url: "https://github.com/douzone-PCHR"
         }
       ]
     }
   ],
+  
   display: true // Set false to hide this section, defaults to true
 };
 
+/* Your Open Source Section to View Your Github Pinned Projects
+To know how to get github key look at readme.md */
+
+const openSource = {
+  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  display: true // Set false to hide this section, defaults to true
+};
 // Achievement Section
 // Include certificates, talks etc
 

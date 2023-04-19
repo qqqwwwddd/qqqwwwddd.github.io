@@ -1,10 +1,12 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import "./StartupProjects.scss";
 import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
+  const { isDark } = useContext(StyleContext);
+  const [projects, setProjects] = useState([]);
   function openUrlInNewTab(url) {
     if (!url) {
       return;
@@ -12,8 +14,33 @@ export default function StartupProject() {
     var win = window.open(url, "_blank");
     win.focus();
   }
-
-  const {isDark} = useContext(StyleContext);
+  function setProjectFunction(array) {
+    setProjects(array);
+  }
+  useEffect(() => {
+    if (bigProjects.display === "true") {
+      const getRepoData = () => {
+        fetch("/projects.json")
+          .then(result => {
+            if (result.ok) {
+              return result.json();
+            }
+            throw result;
+          })
+          .then(response => {
+            setProjectFunction(response.data.user.pinnedItems.edges);
+          })
+          .catch(function (error) {
+            console.error(
+              `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
+            );
+            setProjectFunction("Error");
+            bigProjects.display = "false";
+          });
+      };
+      getRepoData();
+    }
+  }, []);
   if (!bigProjects.display) {
     return null;
   }
@@ -65,6 +92,7 @@ export default function StartupProject() {
                     >
                       {project.projectDesc}
                     </p>
+                    
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
