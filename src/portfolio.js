@@ -26,7 +26,7 @@ const greeting = {
     "도전하며 성장하는 풀스택 개발자 박정인 입니다 👩🏻‍💻"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1dtuXQZH61OH4QBSZ9zPYiX6ah3dAPq5v/view?usp=share_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
