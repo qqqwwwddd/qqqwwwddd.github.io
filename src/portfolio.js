@@ -22,9 +22,7 @@ const illustration = {
 const greeting = {
   username: "PARK JEONG IN",
   title: "안녕하세요,",
-  subTitle: emoji(
-    "도전하며 성장하는 풀스택 개발자 박정인 입니다 👩🏻‍💻"
-  ),
+  subTitle: emoji("도전하며 성장하는 풀스택 개발자 박정인 입니다 👩🏻‍💻"),
   resumeLink:
     "https://drive.google.com/file/d/1dtuXQZH61OH4QBSZ9zPYiX6ah3dAPq5v/view?usp=share_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -37,7 +35,8 @@ const socialMediaLinks = {
   tistory: "https://qqqwwwddd1.tistory.com",
   // linkedin: "https://www.linkedin.com/in/saadpasta/",
   gmail: "qqqwwwddd1@gmail.com",
-  notion: "https://lightning-pocket-e85.notion.site/Full-stack-29b8aba83cdd455593de7e925ebb4138",
+  notion:
+    "https://lightning-pocket-e85.notion.site/Full-stack-29b8aba83cdd455593de7e925ebb4138",
   // facebook: "https://www.facebook.com/saad.pasta7",
   // medium: "https://medium.com/@saadpasta",
   // stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
@@ -56,9 +55,7 @@ const skillsSection = {
       "⚡ 혼자 보다 함께 하는 것에 더 큰 의미를 두고 소통하는 과정을 좋아합니다"
     ),
     emoji("⚡ 실패하는 것을 두려워 하지 않고 끈기 있게 도전합니다."),
-    emoji(
-      "⚡ 끊임없이 새로운 것을 배우고 성장하는 개발자가 되고싶습니다."
-    )
+    emoji("⚡ 끊임없이 새로운 것을 배우고 성장하는 개발자가 되고싶습니다.")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -89,7 +86,7 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "reactjs",
       fontAwesomeClassname: "fab fa-react"
     },
-   
+
     // {
     //   skillName: "swift",
     //   fontAwesomeClassname: "fab fa-swift"
@@ -101,7 +98,7 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "sql-database",
       fontAwesomeClassname: "fas fa-database"
-    },
+    }
 
     // {
     //   skillName: "aws",
@@ -132,13 +129,14 @@ const educationInfo = {
       schoolName: "동명대학교",
       subHeader: emoji(" 유통경영학과 졸업 🎓"),
       duration: emoji("🗓️ 2015.03 ~ 2020.02")
-
     },
     {
       schoolName: "그린컴퓨터아카데미",
       // logo: require("./assets/images/harvardLogo.png"),
-      subHeader: emoji("자바 & 파이썬 활용 빅데이터 개발 실무자 양성 과정 수료 📚"),
-      duration: emoji("🗓️ 8개월 과정"),
+      subHeader: emoji(
+        "자바 & 파이썬 활용 빅데이터 개발 실무자 양성 과정 수료 📚"
+      ),
+      duration: emoji("🗓️ 8개월 과정")
       // desc: "",
       // descBullets: [
       //   "Lorem  dolor sit amet, consectetur adipiscing elit",
@@ -149,7 +147,7 @@ const educationInfo = {
       schoolName: "부산정보산업진흥원",
       // logo: require("./assets/images/stanfordLogo.png"),
       subHeader: emoji("더존 비즈온 Web FullStack 개발자 양성 과정 수료 📚"),
-      duration: emoji("🗓️ 6개월 과정 "),
+      duration: emoji("🗓️ 6개월 과정 ")
       // desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
       // descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
@@ -177,23 +175,19 @@ const techStack = {
       Stack: "JavaScript ", //Insert stack or technology you have experience in
       progressPercentage: "75%" //Insert relative proficiency in percentage
     },
-    { Stack: "React",
-      progressPercentage: "70%"
-    },
+    {Stack: "React", progressPercentage: "70%"},
     {
       Stack: "DataBase",
       detail: emoji("💡 MariaDB 💡 MySQL")
     },
     {
       Stack: "ETC",
-      detail: emoji(" 💡 Git 💡 Notion  💡 Figma "),
+      detail: emoji(" 💡 Git 💡 Notion  💡 Figma ")
     },
     {
       Stack: "TOOLS",
       detail: emoji("💡 Visual Studio Code 💡 STS 💡 Eclipse ")
-    },
-    
-
+    }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
@@ -230,7 +224,6 @@ const techStack = {
 //     }
 //   ]
 // };
-
 
 // Some big projects you have worked on
 
@@ -273,7 +266,7 @@ const bigProjects = {
       ]
     }
   ],
-  
+
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -349,23 +342,20 @@ const openSource = {
 
 const blogSection = {
   title: "BLOG",
-  subtitle:
-    emoji("클릭 시 페이지로 이동 합니다 👆"),
+  subtitle: emoji("클릭 시 페이지로 이동 합니다 👆"),
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
       url: "https://lightning-pocket-e85.notion.site/qqqwwwddd-8287efb3d20043b6824ab684a8b61bb7",
       image: require("../src/assets/images/notion.png"),
       title: "Notion",
-      description:
-        "프로젝트 진행 상황 기록 및 수업 내용 기록"
+      description: "프로젝트 진행 상황 기록 및 수업 내용 기록"
     },
     {
       url: "https://qqqwwwddd1.tistory.com/",
-      image:require("../src/assets/images/tistoryLogo.png"),
+      image: require("../src/assets/images/tistoryLogo.png"),
       title: "Tistory",
-      description:
-        "개인 공부 기록 "
+      description: "개인 공부 기록 "
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -405,8 +395,7 @@ const blogSection = {
 
 const contactInfo = {
   title: emoji("CONTACT ME ☎️"),
-  subtitle:
-    "Let's Talk",
+  subtitle: "Let's Talk",
   number: "+82 10-5233-4330",
   email_address: "qqqwwwddd1@gmail.com"
 };

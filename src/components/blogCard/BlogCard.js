@@ -27,14 +27,14 @@ export default function BlogCard({blog, isDark}) {
             {blog.description}
           </p>
           {blog.image ? (
-                    <div className="blog-image">
-                      <img
-                        src={blog.image}
-                        alt={blog.title}
-                        className="blogcard-image"
-                      ></img>
-                    </div>
-                  ) : null}
+            <div className="blog-image">
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="blogcard-image"
+              ></img>
+            </div>
+          ) : null}
           <div className="go-corner">
             <div className="go-arrow">→</div>
           </div>

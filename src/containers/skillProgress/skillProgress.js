@@ -14,14 +14,20 @@ export default function StackProgress() {
             <h1 className="skills-heading">SKILLS</h1>
             {techStack.experience.map((exp, i) => {
               const progressStyle = {
-                  width: exp.progressPercentage
-                };
+                width: exp.progressPercentage
+              };
               return (
                 <div key={i} className="skill">
                   <p>{exp.Stack}</p>
-                  {exp.progressPercentage? <div className="meter">
-                    <span style={progressStyle}></span>
-                  </div>:<div className="etc"><p>{exp.detail}</p></div>}
+                  {exp.progressPercentage ? (
+                    <div className="meter">
+                      <span style={progressStyle}></span>
+                    </div>
+                  ) : (
+                    <div className="etc">
+                      <p>{exp.detail}</p>
+                    </div>
+                  )}
                   {/* <div className="meter">
                     <span style={progressStyle}></span>
                   </div> */}
@@ -37,7 +43,6 @@ export default function StackProgress() {
               <img
                 alt="Skills"
                 src={require("../../assets/images/skill.svg")}
-                
               />
             )}
           </div>

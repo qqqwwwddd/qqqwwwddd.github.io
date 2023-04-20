@@ -42,40 +42,39 @@ export default function Projects() {
     return null;
   }
 
-    function setrepoFunction(array) {
-      setrepo(array);
-    }
-    if (
-      !(typeof repo === "string" || repo instanceof String) &&
-      openSource.display
-      ) {
-        return (
-          <Suspense fallback={renderLoader()}>
-          <div className="main" id="opensource">
+  function setrepoFunction(array) {
+    setrepo(array);
+  }
+  if (
+    !(typeof repo === "string" || repo instanceof String) &&
+    openSource.display
+  ) {
+    return (
+      <Suspense fallback={renderLoader()}>
+        <div className="main" id="opensource">
           <h1 className="project-title">GitHub</h1>
           <div className="repo-cards-div-main">
-          {repo.map((v, i) => {
-            if (!v) {
-              console.error(
-                `Github Object for repository number : ${i} is undefined`
+            {repo.map((v, i) => {
+              if (!v) {
+                console.error(
+                  `Github Object for repository number : ${i} is undefined`
                 );
               }
               return (
                 <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
-                );
-              })}
-              </div>
-              <Button
-              text={"More Projects"}
-              className="project-button"
-              href={socialMediaLinks.github}
-              newTab={true}
-              />
-              </div>
-              </Suspense>
               );
-            } else {
-              return <FailedLoading />;
-            }
-          }
-          
+            })}
+          </div>
+          <Button
+            text={"More Projects"}
+            className="project-button"
+            href={socialMediaLinks.github}
+            newTab={true}
+          />
+        </div>
+      </Suspense>
+    );
+  } else {
+    return <FailedLoading />;
+  }
+}

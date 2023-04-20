@@ -5,7 +5,7 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
   const [projects, setProjects] = useState([]);
   function openUrlInNewTab(url) {
     if (!url) {
@@ -92,7 +92,7 @@ export default function StartupProject() {
                     >
                       {project.projectDesc}
                     </p>
-                    
+
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {

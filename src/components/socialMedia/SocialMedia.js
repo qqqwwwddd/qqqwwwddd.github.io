@@ -2,7 +2,6 @@ import React from "react";
 import "./SocialMedia.scss";
 import {socialMediaLinks} from "../../portfolio";
 
-
 export default function socialMedia() {
   if (!socialMediaLinks.display) {
     return null;
@@ -21,7 +20,6 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-
       {socialMediaLinks.tistory ? (
         <a
           href={socialMediaLinks.tistory}
@@ -29,7 +27,7 @@ export default function socialMedia() {
           target="_blank"
           rel="noopener noreferrer"
         >
-<i class='fas fa-blog'></i>
+          <i class="fas fa-blog"></i>
           <span></span>
         </a>
       ) : null}
@@ -53,7 +51,7 @@ export default function socialMedia() {
           target="_blank"
           rel="noopener noreferrer"
         >
-<i class='fas fa-pencil-alt'></i>
+          <i class="fas fa-pencil-alt"></i>
           <span></span>
         </a>
       ) : null}
@@ -69,7 +67,7 @@ export default function socialMedia() {
           <span></span>
         </a>
       ) : null} */}
-{/* 
+      {/* 
       {socialMediaLinks.instagram ? (
         <a
           href={socialMediaLinks.instagram}
