@@ -27,7 +27,7 @@ export default function socialMedia() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fas fa-blog"></i>
+          <i className="fas fa-blog"></i>
           <span></span>
         </a>
       ) : null}
@@ -51,7 +51,7 @@ export default function socialMedia() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fas fa-pencil-alt"></i>
+          <i className="fas fa-pencil-alt"></i>
           <span></span>
         </a>
       ) : null}
@@ -63,7 +63,7 @@ export default function socialMedia() {
           target="_blank"
           rel="noopener noreferrer"
         >
-<i class='far fa-lightbulb'></i>
+<i className='far fa-lightbulb'></i>
           <span></span>
         </a>
       ) : null} */}
