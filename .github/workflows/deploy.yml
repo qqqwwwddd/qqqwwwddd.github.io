@@ -8,7 +8,9 @@ env:
 on:
   push:
     branches:
-      - master
+      - main
+    paths-ignore:
+      - "**/README.md"
   schedule:
     - cron: "0 12 * * 1" # see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
 jobs:
@@ -27,6 +29,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
