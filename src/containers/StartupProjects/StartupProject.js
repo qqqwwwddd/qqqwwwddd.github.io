@@ -6,7 +6,7 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
   const {isDark} = useContext(StyleContext);
-  const [projects, setProjects] = useState([]);
+  const [project, setProjects] = useState([]);
   function openUrlInNewTab(url) {
     if (!url) {
       return;

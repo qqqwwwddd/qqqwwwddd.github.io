@@ -6,43 +6,43 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
-  const [mediumBlogs, setMediumBlogs] = useState([]);
-  function setMediumBlogsFunction(array) {
-    setMediumBlogs(array);
-  }
-  //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
-  function extractTextContent(html) {
-    return typeof html === "string"
-      ? html
-          .split("p>")
-          .filter(el => !el.includes(">"))
-          .map(el => el.replace("</", ".").replace("<", ""))
-          .join(" ")
-      : NaN;
-  }
-  useEffect(() => {
-    if (blogSection.displayMediumBlogs === "true") {
-      const getProfileData = () => {
-        fetch("/blogs.json").then(result => {
-          if (result.ok) {
-            // return result.json();
-            return;
-          }
-        });
-        // .then(response => {
-        //   setMediumBlogsFunction(response.items);
-        // });
-        // .catch(function (error) {
-        //   console.error(
-        //     `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
-        //   );
-        //   setMediumBlogsFunction("Error");
-        blogSection.displayMediumBlogs = "false";
-        // });
-      };
-      getProfileData();
-    }
-  }, []);
+  // const [mediumBlogs, setMediumBlogs] = useState([]);
+  // function setMediumBlogsFunction(array) {
+  //   setMediumBlogs(array);
+  // }
+  // //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
+  // function extractTextContent(html) {
+  //   return typeof html === "string"
+  //     ? html
+  //         .split("p>")
+  //         .filter(el => !el.includes(">"))
+  //         .map(el => el.replace("</", ".").replace("<", ""))
+  //         .join(" ")
+  //     : NaN;
+  // }
+  // useEffect(() => {
+  //   if (blogSection.displayMediumBlogs === "true") {
+  //     const getProfileData = () => {
+  //       fetch("/blogs.json").then(result => {
+  //         if (result.ok) {
+  //           // return result.json();
+  //           return;
+  //         }
+  //       });
+  //       // .then(response => {
+  //       //   setMediumBlogsFunction(response.items);
+  //       // });
+  //       // .catch(function (error) {
+  //       //   console.error(
+  //       //     `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
+  //       //   );
+  //       //   setMediumBlogsFunction("Error");
+  //       blogSection.displayMediumBlogs = "false";
+  //       // });
+  //     };
+  //     getProfileData();
+  //   }
+  // }, []);
   if (!blogSection.display) {
     return null;
   }
@@ -61,9 +61,10 @@ export default function Blogs() {
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {blogSection.displayMediumBlogs !== "false" ||
-            mediumBlogs === "Error"
-              ? blogSection.blogs.map((blog, i) => {
+            {blogSection.displayMediumBlogs !== "false"
+              ? // ||
+                // mediumBlogs === "Error"
+                blogSection.blogs.map((blog, i) => {
                   return (
                     <BlogCard
                       key={i}
@@ -77,7 +78,8 @@ export default function Blogs() {
                     />
                   );
                 })
-              : mediumBlogs.map((blog, i) => {
+              : blogSection.blogs.map((blog, i) => {
+                  // : mediumBlogs.map((blog, i) => {
                   return (
                     <BlogCard
                       key={i}
@@ -85,7 +87,8 @@ export default function Blogs() {
                       blog={{
                         url: blog.link,
                         title: blog.title,
-                        description: extractTextContent(blog.content)
+                        // description: extractTextContent(blog.content)
+                        description: blog.content
                       }}
                     />
                   );
