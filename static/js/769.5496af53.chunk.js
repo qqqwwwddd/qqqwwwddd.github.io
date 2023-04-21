@@ -4,7 +4,7 @@
   [769],
   {
     6769: (e, s, i) => {
-      i.r(s), i.d(s, {default: () => t});
+      i.r(s), i.d(s, { default: () => t });
       i(2791);
       var a = i(3365),
         l = i(4670),
@@ -13,7 +13,7 @@
         r = i(1394),
         d = i(184);
       function t(e) {
-        let {prof: s} = e;
+        let { prof: s } = e;
         return (
           l.pM ? (s.hireable = "Yes") : (s.hireable = "No"),
           (0, d.jsx)(r.pT, {
@@ -26,7 +26,7 @@
               children: [
                 (0, d.jsx)("h1", {
                   className: "prof-title",
-                  children: "Contact Me"
+                  children: "Contact Me",
                 }),
                 (0, d.jsxs)("div", {
                   className: "row",
@@ -38,12 +38,12 @@
                           className: "blog-header",
                           children: (0, d.jsx)("p", {
                             className: "subTitle blog-subtitle",
-                            children: l.ns.subtitle
-                          })
+                            children: l.ns.subtitle,
+                          }),
                         }),
                         (0, d.jsxs)("h2", {
                           className: "bio-text",
-                          children: ['"', n()(String(s.bio)), '"']
+                          children: ['"', n()(String(s.bio)), '"'],
                         }),
                         null !== s.location &&
                           (0, d.jsx)("div", {
@@ -60,39 +60,39 @@
                                   stroke: "currentColor",
                                   children: (0, d.jsx)("path", {
                                     fillRule: "evenodd",
-                                    d: "M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"
-                                  })
+                                    d: "M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z",
+                                  }),
                                 }),
-                                s.location
-                              ]
-                            })
+                                s.location,
+                              ],
+                            }),
                           }),
                         (0, d.jsx)("div", {
                           className: "opp-div",
                           children: (0, d.jsxs)("span", {
                             className: "desc-prof",
-                            children: ["Open for opportunities: ", s.hireable]
-                          })
+                            children: ["Open for opportunities: ", s.hireable],
+                          }),
                         }),
-                        (0, d.jsx)(a.Z, {})
-                      ]
+                        (0, d.jsx)(a.Z, {}),
+                      ],
                     }),
                     (0, d.jsx)("div", {
                       className: "image-content-profile",
                       children: (0, d.jsx)("img", {
                         src: s.avatarUrl,
                         alt: s.name,
-                        className: "profile-image"
-                      })
-                    })
-                  ]
-                })
-              ]
-            })
+                        className: "profile-image",
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
           })
         );
       }
-    }
-  }
+    },
+  },
 ]);
 //# sourceMappingURL=769.5496af53.chunk.js.map
