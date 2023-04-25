@@ -22805,10 +22805,10 @@
         }
         function Pn(e, t, i, r) {
           (e = t.state),
-            "function" === typeof t.componentWillReceiveProps &&
-              t.componentWillReceiveProps(i, r),
-            "function" === typeof t.UNSAFE_componentWillReceiveProps &&
-              t.UNSAFE_componentWillReceiveProps(i, r),
+            "function" === typeof t.componentDidUpdate &&
+              t.componentDidUpdate(i, r),
+            "function" === typeof t.componentDidUpdate &&
+              t.componentDidUpdate(i, r),
             t.state !== e && bn.enqueueReplaceState(t, t.state, null);
         }
         function wn(e, t, i, r) {
@@ -23937,8 +23937,8 @@
                 "function" === typeof d ||
                 "function" === typeof s.getSnapshotBeforeUpdate;
             c ||
-              ("function" !== typeof s.UNSAFE_componentWillReceiveProps &&
-                "function" !== typeof s.componentWillReceiveProps) ||
+              ("function" !== typeof s.componentDidUpdate &&
+                "function" !== typeof s.componentDidUpdate) ||
               ((o !== r || l !== u) && Pn(t, s, r, u)),
               (dn = !1);
             var h = t.memoizedState;
@@ -23981,8 +23981,8 @@
               (c =
                 "function" === typeof (d = i.getDerivedStateFromProps) ||
                 "function" === typeof s.getSnapshotBeforeUpdate) ||
-                ("function" !== typeof s.UNSAFE_componentWillReceiveProps &&
-                  "function" !== typeof s.componentWillReceiveProps) ||
+                ("function" !== typeof s.componentDidUpdate &&
+                  "function" !== typeof s.componentDidUpdate) ||
                 ((o !== r || l !== u) && Pn(t, s, r, u)),
               (dn = !1),
               (l = t.memoizedState),
@@ -23994,12 +23994,12 @@
                     (kn(t, i, d, r), (h = t.memoizedState)),
                   (d = dn || En(t, i, o, r, l, h, u))
                     ? (c ||
-                        ("function" !== typeof s.UNSAFE_componentWillUpdate &&
-                          "function" !== typeof s.componentWillUpdate) ||
-                        ("function" === typeof s.componentWillUpdate &&
-                          s.componentWillUpdate(r, h, u),
-                        "function" === typeof s.UNSAFE_componentWillUpdate &&
-                          s.UNSAFE_componentWillUpdate(r, h, u)),
+                        ("function" !== typeof s.componentDidUpdate &&
+                          "function" !== typeof s.componentDidUpdate) ||
+                        ("function" === typeof s.componentDidUpdate &&
+                          s.componentDidUpdate(r, h, u),
+                        "function" === typeof s.componentDidUpdate &&
+                          s.componentDidUpdate(r, h, u)),
                       "function" === typeof s.componentDidUpdate &&
                         (t.effectTag |= 4),
                       "function" === typeof s.getSnapshotBeforeUpdate &&
@@ -27822,7 +27822,7 @@
                 }
               },
               {
-                key: "componentWillUpdate",
+                key: "componentDidUpdate",
                 value: function (e) {
                   this.options.animationData !== e.options.animationData &&
                     (this.deRegisterEvents(this.props.eventListeners),
@@ -29116,7 +29116,7 @@
                     }
                   },
                   {
-                    key: "componentWillReceiveProps",
+                    key: "componentDidUpdate",
                     value: function (e) {
                       void 0 !== e.when && (this.isOn = !!e.when),
                         e.fraction !== this.props.fraction &&
