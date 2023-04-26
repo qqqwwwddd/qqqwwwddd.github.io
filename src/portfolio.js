@@ -246,7 +246,7 @@ const bigProjects = {
     {
       image: require("./assets/images/untacttour.png"),
       projectName: "✈️ Untactour ",
-      projectDesc: "비대면 온라인 해외 여행 컨텐츠 쇼핑몰 Java 프로젝트",
+      projectDesc: "비대면 온라인 해외 여행 컨텐츠 쇼핑몰 프로젝트",
       footerLink: [
         {
           name: emoji("Github ❤︎"),
