@@ -234,7 +234,7 @@ const bigProjects = {
     {
       image: require("./assets/images/pixabay.png"),
       projectName: emoji("💻 pixabay 클론 코딩"),
-      projectDesc: "React 학습을 위한 토이 프로젝트 ",
+      projectDesc: "React 학습을 위한 토이 프로젝트 (기여도 100%)",
       footerLink: [
         {
           name: emoji("Github ❤︎"),
@@ -246,7 +246,8 @@ const bigProjects = {
     {
       image: require("./assets/images/untacttour.png"),
       projectName: "✈️ Untactour ",
-      projectDesc: "비대면 온라인 해외 여행 컨텐츠 쇼핑몰 프로젝트",
+      projectDesc:
+        "비대면 온라인 해외 여행 컨텐츠 쇼핑몰 프로젝트 (기여도 40% - 4인 프로젝트로 설계 및 메인, 장바구니를 담당 하였습니다.)",
       footerLink: [
         {
           name: emoji("Github ❤︎"),
@@ -257,7 +258,8 @@ const bigProjects = {
     {
       image: require("./assets/images/goco.png"),
       projectName: emoji("💼 GoCompany"),
-      projectDesc: "그룹웨어(전자결재/일정관리) SpringBoot & React 프로젝트",
+      projectDesc:
+        "그룹웨어(전자결재/일정관리) SpringBoot & React 프로젝트 (기여도 40% - 4인 프로젝트로 기획, DB설계와 협업관리, 전자결재 및 S3 파일 관리를 담당 하였습니다.)",
       footerLink: [
         {
           name: emoji("Github ❤︎"),
